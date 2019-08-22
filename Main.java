@@ -4,15 +4,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int [] arreglo = new int[100];
+        int [][] matriz = new int[3][3];
 
-        for (int i = 0; i < arreglo.length ; i++) {
+        for (int i = 0; i < matriz.length ; i++) {
 
-            arreglo[i] = (int)(Math.random()*100);
+            for (int j = 0; j < matriz.length ; j++) {
+
+                matriz[i][j] = (int)(Math.random()*30);
+            }
         }
-        for (int elemento:arreglo){
 
-            System.out.println(elemento+ " ");
+        for (int[] dimension1:matriz){
+            for (int elemento:dimension1){
+                System.out.print(elemento+" ");
+            }
+            System.out.println(" ");
         }
     }
 }
